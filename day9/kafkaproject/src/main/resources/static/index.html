@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Kafka Topic Demo</title>
+
+	<style>
+		body {
+
+			font-family: Arial;
+			background: #f5f5f5;
+			padding: 40px;
+
+		}
+
+		.container {
+
+			width: 600px;
+			margin: auto;
+			background: white;
+			padding: 25px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px gray;
+
+		}
+
+		input {
+
+			width: 75%;
+			padding: 10px;
+			font-size: 16px;
+
+		}
+
+		button {
+
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+
+		}
+
+		h3 {
+
+			margin-top: 30px;
+
+		}
+
+		li {
+
+			padding: 8px;
+
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<h2>Kafka Topic Demo</h2>
+
+		<input id="message" placeholder="Enter Message">
+
+		<button onclick="sendMessage()">
+			Send
+		</button>
+
+		<h3>Live Messages</h3>
+
+		<ul id="messages">
+
+		</ul>
+
+	</div>
+
+	<script>
+
+		async function sendMessage() {
+
+			let msg = document.getElementById("message").value;
+
+			await fetch("/kafka/publish?message=" + encodeURIComponent(msg), {
+
+				method: "POST"
+
+			});
+
+			document.getElementById("message").value = "";
+
+		}
+
+		async function loadMessages() {
+
+			const response = await fetch("/kafka/messages");
+
+			const data = await response.json();
+
+			let html = "";
+
+			for (let i = 0; i < data.length; i++) {
+
+				html += "<li>" + data[i] + "</li>";
+
+			}
+
+			document.getElementById("messages").innerHTML = html;
+
+		}
+
+		setInterval(loadMessages, 2000);
+
+		loadMessages();
+
+	</script>
+
+</body>
+
+</html>
