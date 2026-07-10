@@ -1,0 +1,5 @@
+/Users/madhav/Documents/sts-workspaceproject/zealous-noether/reporting-service/src/main/java/com/eventmanagement/reportingservice/ReportingServiceApplication.java
+/Users/madhav/Documents/sts-workspaceproject/zealous-noether/reporting-service/src/main/java/com/eventmanagement/reportingservice/controller/ReportingController.java
+/Users/madhav/Documents/sts-workspaceproject/zealous-noether/reporting-service/src/main/java/com/eventmanagement/reportingservice/entity/EventStatistics.java
+/Users/madhav/Documents/sts-workspaceproject/zealous-noether/reporting-service/src/main/java/com/eventmanagement/reportingservice/kafka/RegistrationConsumer.java
+/Users/madhav/Documents/sts-workspaceproject/zealous-noether/reporting-service/src/main/java/com/eventmanagement/reportingservice/repository/EventStatisticsRepository.java

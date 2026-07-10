@@ -1,0 +1,5 @@
+/Users/madhav/Documents/sts-workspaceproject/zealous-noether/registration-service/src/main/java/com/eventmanagement/registrationservice/RegistrationServiceApplication.java
+/Users/madhav/Documents/sts-workspaceproject/zealous-noether/registration-service/src/main/java/com/eventmanagement/registrationservice/controller/RegistrationController.java
+/Users/madhav/Documents/sts-workspaceproject/zealous-noether/registration-service/src/main/java/com/eventmanagement/registrationservice/entity/Registration.java
+/Users/madhav/Documents/sts-workspaceproject/zealous-noether/registration-service/src/main/java/com/eventmanagement/registrationservice/kafka/RegistrationProducer.java
+/Users/madhav/Documents/sts-workspaceproject/zealous-noether/registration-service/src/main/java/com/eventmanagement/registrationservice/repository/RegistrationRepository.java
